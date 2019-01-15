@@ -1,0 +1,271 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.logo{
+    height: 100px;
+}
+
+.logo img{
+    height: 100%;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #E4393C;
+    text-decoration: none;
+}
+
+div{
+    display: block;
+}
+
+.mod_copyright{
+    padding-top: 10px;
+    border-top: 1px #666666 solid;
+}
+
+.hide {
+    display: none;
+}
+
+.login-warp {
+    position: relative;
+    height: 500px;
+    background: url(/static/images/bg/LoginBackground.png) 65px 0px no-repeat;
+    background-color: #970100;
+}
+
+.login-form {
+    position: relative;
+    background-color: #fff;
+    float: right;
+    top: 25px;
+    height: 450px;
+    width: 380px;
+
+}
+
+.log-title h3{
+    width: 99%;
+    height: 30px;
+    text-decoration: none;
+    color: #E4393C;
+}
+
+.log-item{
+    padding: 25px;
+    width: 100%;
+    height: 339px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.log-item .login-label{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-right: 1px solid #bdbdbd;
+    background: url(/static/images/info/pwd-icons-new.png) no-repeat;
+}
+
+.log-item .name-label{
+    background-position: 0 0;
+}
+
+.log-item .pwd-label{
+    background-position: -48px 0;
+}
+
+.log-item .items .item{
+    position: relative;
+    margin-bottom: 40px;
+    z-index: 1;
+    height: 40px;
+    width: 100%;
+}
+
+.log-item .fore-item1{
+    border: 1px solid #bdbdbd;
+}
+
+.log-item .fore-item2{
+    border: 1px solid #bdbdbd;
+}
+
+.log-item .item input{
+    line-height: 18px;
+    height: 38px;
+    border: 0;
+    padding: 10px 0px 10px 50px;
+    width: 100%;
+    float: none;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+}
+
+.msg-wrap{
+    min-height: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: auto!important;
+}
+
+.log-item .safe{
+    position: relative;
+    color: #666;
+}
+
+.log-item .safe .forget-pw-safe{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0
+}
+
+.login-form .log-item .items .fore-item3{
+    margin-bottom: 0px;
+}
+
+
+.log-item .fore-item4{
+
+    margin: 0px auto;
+}
+
+.msg-error {
+    position: relative;
+    background: #ffebeb;
+    color: #e4393c;
+    border: 1px solid #faccc6;
+    padding: 3px 10px 3px 40px;
+    line-height: 15px;
+    height: auto;
+}
+
+.msg-error b {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: block;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(/static/images/info/pwd-icons-new.png) -104px -49px no-repeat;
+}
+
+.coagent{
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 50px;
+    border-top: 1px solid #f4f4f4;
+    height: auto;
+    background-color: #fcfcfc;
+}
+
+.thrid-login>*{
+    float: left;
+}
+
+.thrid-login .go-register{
+    float: right;
+}
+
+.thrid-login{
+    position: relative;
+    overflow: hidden;
+}
+
+.third-qq{
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+}
+
+
+.third-qq b{
+    width: 19px;
+    height: 18px;
+    display: block;
+    background: url(/static/images/info/QQ-weixin.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 16px;
+}
+
+.third-weixin{
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+}
+
+.third-weixin b{
+    width: 19px;
+    height: 18px;
+    display: block;
+    background: url(/static/images/info/QQ-weixin.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 16px;
+}
+
+.thrid-login .third-qq .QQ-icon{
+    background-position: 0 0;
+}
+
+.thrid-login .third-weixin .weixin-icon{
+    background-position: -20px 0;
+}
+
+.line{
+    color: #ccc;
+    padding: 0 10px;
+}
+
+.coagent .go-register a{
+    color: #b61d1d;
+    font-size: 14px;
+}
+
+.go-register b{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(/static/images/info/pwd-icons-new.png) -104px -75px no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.login-wrap .login-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 475px;
+    background: #e93854;
+}
+
+.banner-bg{
+
+    background-color: #970100;
+}
+

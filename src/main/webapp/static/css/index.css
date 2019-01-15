@@ -1,0 +1,416 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #f0f3ef;
+}
+
+#header .w {
+    position: relative;
+    z-index: 11;
+    height: 140px;
+}
+
+ul{
+    display: block;
+    list-style-type: none;
+}
+
+.sc-icon{
+    width: 188px;
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}
+
+
+#picture-box .w {
+    position: relative;
+    height: 476px;
+    margin-top: 10px;
+}
+
+#items-list ul{
+    float: left;
+
+}
+
+#items-list li {
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 12px;
+    position: relative;
+}
+
+#items-list{
+    position: relative;
+    float: left;
+    width: 216px;
+    height: 444px;
+    z-index: 2;
+    padding-top: 12px;
+    box-sizing: border-box;
+    background: #2b333b;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: 400;
+}
+
+#items-list li a{
+    display: block;
+    color: rgba(255,255,255,.6);
+    padding: 0 16px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 60px;
+    transition: all .1s;
+}
+
+.js-menu-item-on {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.jiantou {
+    float: right;
+}
+
+#pic-list .picbox{
+    position: relative;
+    height: 100%;
+
+}
+
+#pic-list{
+    float: left;
+    width: 764px;
+    height: 444px;
+    margin-right: 20px;
+}
+
+.picbox .lun-pic-auto{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+
+}
+
+.picbox .lun-pic-auto img{
+    border-top-right-radius: 10px;
+}
+
+.picbox .pic-index{
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+}
+
+.picbox .pic-index span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background: rgba(7,17,27,.8);
+    border: 1px solid rgba(255,255,255,.6);
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.picbox .pic-index span.pic-active{
+    background: #fff;
+    border: 1px solid rgba(7,17,27,.4);
+}
+
+.picbox #left-button{
+    left: 0px;
+    top: 208px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.picbox #right-button {
+    right: 0px;
+    top: 208px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.picbox .change-button {
+    position: absolute;
+    width: 36px;
+    height: 60px;
+    overflow: hidden;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    line-height: 60px;
+    text-shadow: 0 2px 4px rgba(7, 17, 27, 0.6);
+    z-index: 1;
+
+}
+
+.dark-button {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.picbox .picinfo{
+    position: relative;
+    height: 316px;
+    border: 1px red solid;
+    border-bottom-right-radius: 10px;
+}
+
+#fs_col{
+    float: left;
+    width: 190px;
+    height: 444px;
+    overflow: hidden;
+}
+
+.sk {
+    height: 275px;
+    margin-bottom: 30px;
+}
+
+
+
+.sk_inner {
+    z-index: 9;
+    position: relative;
+}
+.sk_inner {
+    background: #fff;
+    overflow: hidden;
+}
+
+.sk_hd {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 275px;
+    background: #e83632;
+    color: #fff;
+}
+
+.sk_hd_lk {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.sk_tit{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 42px;
+    font-size: 34px;
+}
+
+.sk_subtit {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 90px;
+    color: #f19999;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+
+.sk_desc {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 170px;
+    font-size: 16px;
+}
+
+.sk_cd {
+    position: absolute;
+    top: 212px;
+    left: 30px;
+    height: 40px;
+}
+
+.sk .cd_item {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #2f3430;
+    margin-right: 5px;
+}
+
+.sk .cd_day {
+    display: none;
+}
+
+.sk .cd_item_txt {
+    position: relative;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sk_hd .sk_hd_lk:hover{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.sk_bd {
+    float: left;
+}
+
+.sk_list_inner {
+    position: relative;
+    width: 800px;
+    height: 275px;
+}
+
+.sk_list_item{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 275px;
+}
+
+.sk_item_name{
+    position: absolute;
+    top: 172px;
+    left: 21px;
+    width: 160px;
+    padding: 0 15px;
+    line-height: 30px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sk_item_price {
+    position: absolute;
+    left: 15px;
+    top: 230px;
+    width: 160px;
+    height: 20px;
+    padding: 1px;
+    background: #e6382f;
+    line-height: 20px;
+}
+
+.sk_item_price_new {
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sk_item_price_origin {
+    float: left;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 80px;
+    height: 20px;
+    background: #fff;
+    text-align: center;
+    color: #b7bcb8;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.mod_price i {
+    margin-right: 3px;
+    font-family: arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+i {
+    font-style: normal;
+}
+
+.sk_list {
+    float: left;
+    height: 275px;
+}
+
+.box {
+    float: left;
+    width: 390px;
+    height: 450px;
+    margin: 0 10px 30px 0;
+    background-color: white;
+}
+
+.corechn1_inner {
+    overflow: hidden;
+}
+
+.box_last {
+    margin-right: 0;
+}
+
+.mod_help {
+    padding: 20px 0;
+}
+
+.mod_help_list {
+    overflow: hidden;
+    height: 160px;
+}
+
+.mod_help_nav {
+    float: left;
+    width: 180px;
+    line-height: 22px;
+    margin-left: 40px;
+}
+
+.mod_help_nav_tit {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.mod_help .grid_c1{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+.mod_copyright_inner{
+    padding: 15px 0;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.mod_help_nav a:hover {
+    color: #E33333;
+    text-decoration: none;
+}
+
+#settleup .sc-icon a {
+    color: #f10214;
+}

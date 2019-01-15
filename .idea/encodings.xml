@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/CloudTest.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/Foot.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/Head.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap-theme.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap-theme.css.map" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap-theme.min.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap-theme.min.css.map" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.css.map" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.min.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.min.css.map" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/font-awesome.min.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/css/iconfont.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/1f83d20a686195ec.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/90e6e0196ae5177f.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/92fb657ae2522613.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/bg/LoginBackground.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/bg/headbg.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/info/QQ-weixin.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/info/icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/info/pwd-icons-new.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/info/reg-icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/logo/Login.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/logo/Logo.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/logo/cbnhj-dz1u8-002.ico" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/logo/relogo.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/static/images/lun" charset="GBK" />
+  </component>
+</project>
