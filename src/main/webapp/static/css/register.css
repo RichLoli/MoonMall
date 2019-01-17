@@ -294,3 +294,50 @@ a{
     padding-top: 18px;
     background-color: #e2231a;
 }
+
+.capslock-tip {
+    right: 2px;
+    top: -45px;
+}
+
+.tips {
+    position: absolute;
+    background: #fef4e5;
+    border: solid 1px #f6c090;
+    color: #bc5212;
+    display: none;
+    padding: 0 12px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 3px;
+    z-index: 11;
+}
+
+.tips .arrow {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-color: #f6c090 transparent transparent;
+    border-style: solid dashed dashed;
+    border-width: 8px;
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    bottom: -16px;
+}
+
+.tips .arrow-inner {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-color: #fef4e5 transparent transparent;
+    border-style: solid dashed dashed;
+    border-width: 8px;
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    bottom: -15px;
+}

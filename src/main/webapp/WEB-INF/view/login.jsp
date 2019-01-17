@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -75,7 +76,7 @@
                                 </div>
                                 <div class="item fore-item4">
                                     <div class="login-button">
-                                        <button class="btn btn-block btn-danger">登录</button>
+                                        <button id="loginsubmit" class="btn btn-block btn-danger">登录</button>
                                     </div>
                                 </div>
                             </div>
@@ -119,5 +120,5 @@
     </div>
 </footer>
 </body>
-<script src="/static/js/Login.js"></script>
+<script src="/static/js/login.js"></script>
 </html>

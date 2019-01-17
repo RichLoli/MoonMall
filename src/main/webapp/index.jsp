@@ -3,6 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/logo/cbnhj-dz1u8-002.ico" type="image/x-icon"/>
     <script src="static/js/jquery-3.3.1.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="static/css/bootstrap.css">
@@ -11,6 +13,7 @@
     <link rel="stylesheet" href="static/css/index.css">
     <link rel="stylesheet" href="static/css/Head.css">
     <link rel="stylesheet" href="static/css/Foot.css">
+    <title>欢迎来到首页-MoonMall</title>
 </head>
 <body>
 <%@include file="WEB-INF/view/master/Head.jsp"%>
@@ -57,7 +60,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)">
-                            <span>房产&nbsp;/&nbsp;汽车&nbsp;/&nbsp;汽车用品</span>
+                            <span>医疗保健&nbsp;/&nbsp;&nbsp;计生情趣</span>
                             <i class="iconfont icon-jiantou1 jiantou"></i>
                         </a>
                     </li>
@@ -235,4 +238,5 @@
 <%@include file="WEB-INF/view/master/Foot.jsp"%>
 </body>
 <script src="static/js/index.js"></script>
+<script src="static/js/Head.js"></script>
 </html>

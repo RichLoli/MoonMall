@@ -9,7 +9,7 @@ public class User {
     /**
      * 用户id
      */
-    private int id;
+    private String id;
     private String username;
     private String password;
     private String phone;
@@ -17,18 +17,18 @@ public class User {
     public User() {
     }
 
-    public User(int id, String username, String password, String phone) {
+    public User(String id, String username, String password, String phone) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.phone = phone;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -54,5 +54,16 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }

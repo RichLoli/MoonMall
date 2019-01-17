@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="/static/images/cbnhj-dz1u8-002.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/static/images/logo/cbnhj-dz1u8-002.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 
@@ -36,7 +36,7 @@
 <body>
 <div class="header">
     <div class="w">
-        <a href="" class="logo"></a>
+        <a href="/index.jsp" class="logo"></a>
     </div>
     <div class="logo-title">欢迎注册</div>
 </div>
@@ -121,7 +121,7 @@
                 <i class="i-status"></i>
                 <i class="i-cancel" style="display: none;"></i>
                 <div class="capslock-tip tips" style="display: none;">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div></div>
-            <div class="input-tip">
+            <div class="input-tip" id="pwd1">
                 <span></span>
             </div>
             <div class="form-item" style="z-index: 12; border-color: rgb(153, 153, 153);">
@@ -130,11 +130,11 @@
                 <i class="i-status"></i>
                 <i class="i-cancel" style="display: none;"></i>
                 <div class="capslock-tip tips" style="display: none;">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div></div>
-            <div class="input-tip">
+            <div class="input-tip" id="pwd2">
                 <span></span>
             </div>
             <div><button class="btn-register" id="form-register" clstag="pageclick|keycount|reg_puser_201804031|18">立即注册</button></div>
-            <div class="input-tip">
+            <div class="input-tip" id="commit">
                 <span></span>
             </div>
             <!--<div class="back-btn" id="back-btn">返回上一步</div>-->
@@ -146,7 +146,7 @@
                 </div>
                 <div class="complet-text">
                     <span>您已经成功注册为MoonMall用户</span><br>
-                    <a href="">返回首页</a>
+                    <a href="/index.jsp">返回首页</a>
                 </div>
             </div>
         </div>

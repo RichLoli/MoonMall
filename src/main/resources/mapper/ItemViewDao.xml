@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lumoon.moonmall.dao.ItemViewDao">
+    <select id="findItemsByName" resultType="item">
+          SELECT item_view.id,item_view.`name`,item_view.`status`,
+          item_view.picture_url,item_view.keywords,item_view.price
+          FROM item_view where item_view.keywords like '%${keyword}%'
+          LIMIT #{pageNo}-1,#{pageNo}*16
+    </select>
+</mapper>

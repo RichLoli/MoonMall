@@ -12,12 +12,6 @@ $(function () {
     $(".picbox .lun-pic-auto:gt(0)").fadeOut();
     //定时函数切换图片
     setInterval(change_pic, 5000);
-
-    $.getJSON("/login/check", function (data) {
-        if (data.username != null) {
-            $("#ttbar-login").text(data.username);
-        }
-    });
 });
 
 //切换图片函数
@@ -50,7 +44,7 @@ $pic_index.click(function () {
         //将下一张索引计算好
         if (curr_obj_index == 4) {
             pic_next_index = 0;
-        }else {
+        } else {
             pic_next_index = curr_obj_index + 1;
         }
     }
@@ -75,10 +69,10 @@ var isLogin;
 
 //登录点击触发函数
 function login() {
-    $.get("",function (data) {
-        if (data === 100) {
+    $.get("", function (data) {
+            if (data === 100) {
 
-        }
+            }
         }
     );
 }
@@ -91,7 +85,7 @@ function register() {
 //轮播图左侧菜单鼠标悬浮事件
 $("#items-list li a").hover(function () {
     $(this).addClass("js-menu-item-on");
-},function () {
+}, function () {
     $(this).removeClass("js-menu-item-on")
 });
 
@@ -110,7 +104,7 @@ $(".picbox #right-button").click(function () {
         change_in(pic_curr_temp);
         if (pic_curr_temp == 4) {
             pic_next_index = 0;
-        }else{
+        } else {
             pic_next_index++;
         }
 
@@ -124,11 +118,10 @@ $(".picbox #left-button").click(function () {
         change_in(pic_curr_temp);
         if (pic_curr_temp == 0) {
             pic_next_index = 1;
-        }else{
+        } else {
             pic_next_index--;
         }
     }
 });
-
 
 

@@ -6,4 +6,15 @@
     <select id="findUserByName" parameterType="String" resultType="user">
         select id,username,password,phone from user where username = #{value};
     </select>
+
+    <insert id="addUser" parameterType="user">
+--         insert into user(id,username,password,phone) values (#{id},#{username},#{password},#{phone});
+        INSERT INTO user (id,username,password,phone) VALUES (#{id},#{username},#{password},#{phone})
+         ON DUPLICATE KEY UPDATE ;
+    </insert>
+
+    <select id="login" parameterType="user" resultType="int">
+        SELECT count(*) FROM user_login_view WHERE (user_login_view.username = '${username}' OR
+        user_login_view.phone = '${username}' OR user_login_view.email= '${username}') AND `password` = '${password}'
+    </select>
 </mapper>

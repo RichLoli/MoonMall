@@ -158,6 +158,7 @@ ul{
 .fr li{
     float: left;
     padding-left: 8px;
+    position: relative;
 }
 
 #settleup .sc-icon a {
@@ -249,4 +250,18 @@ a {
 
 i {
     font-style: normal;
+}
+
+.dropdown-layer{
+    background: #fff;
+    position: absolute;
+    top: 31px;
+    right: -97px;
+    width: 166px;
+    z-index: 12;
+}
+
+#user-name span{
+    float: right;
+    color: #E33333;
 }

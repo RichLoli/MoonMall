@@ -22,4 +22,26 @@ public class LoginServiceImpl implements LoginService {
     public User findUserByName(String username) {
         return loginDao.findUserByName(username);
     }
+
+    /**
+     * 注册用户
+     *
+     * @param user
+     * @return
+     */
+    @Override
+    public boolean addUser(User user) {
+        return loginDao.addUser(user) > 0;
+    }
+
+    /**
+     * 登录
+     *
+     * @param user
+     * @return
+     */
+    @Override
+    public boolean login(User user) {
+        return loginDao.login(user) > 0;
+    }
 }

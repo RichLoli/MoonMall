@@ -5,7 +5,6 @@ import cn.lumoon.moonmall.model.User;
 import cn.lumoon.moonmall.service.LoginService;
 import cn.lumoon.moonmall.utils.PhoneCodeUtil;
 import cn.lumoon.moonmall.utils.SpringUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +36,8 @@ public class LoginController {
     public User check(HttpServletRequest request){
         HttpSession session = request.getSession();
         if (session.getAttribute("user") == null) {
-            return new User(0,null,null,null);
+
+            return new User(null,null,null,null);
         }
         return (User) session.getAttribute("user");
     }
@@ -47,7 +47,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/tologin")
-    public String toLogin(){
+    public String toLogin(HttpServletRequest request){
         return "login";
     }
 
@@ -98,5 +98,42 @@ public class LoginController {
             return "true";
         }
         return "false";
+    }
+
+    /**
+     * 注册用户
+     * @return
+     */
+    @RequestMapping("/register")
+    @ResponseBody
+    public String register(@RequestBody User user){
+        boolean status = loginService.addUser(user);
+        return status + "";
+    }
+
+    /**
+     *登录页面的验证
+     * @return
+     */
+    @RequestMapping("/log")
+    @ResponseBody
+    public String login(@RequestBody User user, HttpServletRequest request){
+        boolean success = loginService.login(user);
+        if (success) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+            return "200";
+        }else {
+            return "400";
+        }
+    }
+
+    /**
+     * 退出账户
+     */
+    @RequestMapping("/exitAccount")
+    public void exitAccount(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.removeAttribute("user");
     }
 }

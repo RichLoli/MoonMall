@@ -34,7 +34,9 @@
                 <div class="search-m">
                     <div class="form">
                         <input type="text" name="searchItem" id="searchItem" placeholder="搜索商品"/>
-                        <button class="button"><i class="fa fa-search"></i></button>
+                        <button id="search-button" class="button">
+                            <i class="fa fa-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>

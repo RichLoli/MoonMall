@@ -12,4 +12,17 @@ public interface LoginDao {
      */
     User findUserByName(String username);
 
+    /**
+     * 注册用户
+     * @param user
+     * @return
+     */
+    int addUser(User user);
+
+    /**
+     * 登录
+     * @return
+     */
+    int login(User user);
+
 }

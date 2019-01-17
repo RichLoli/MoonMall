@@ -1,6 +1,6 @@
 $(function () {
-    $(".reg-form").hide();
-    // $("#step2-wrap").hide();
+    // $(".reg-form").hide();
+    $("#step2-wrap").hide();
     $("#step-complet").hide();
 });
 
@@ -130,6 +130,7 @@ $("#step1-next").click(function () {
                     $("#step2-wrap").show();
                     $(".cur-step").removeClass("cur-step");
                     $(".pro-step2").addClass("cur-step");
+                    phone = $("#form-phone").val();
                 } else {
                     $("#form-code-info").show().text("验证码错误或已失效");
                     currCode = code;
@@ -150,11 +151,12 @@ $("#form-account").blur(function () {
                 dataType: "text",
                 success:function (data) {
                     if (data == "true") {
-                        alert(data)
-                        $("#form-item-account").next().children("span").text("该名称已经被使用，请您换一个名称");
+                        $("#form-item-account").next().children("span").html("<span style='color: red'>该名称已经被使用，请您换一个名称</span>");
+                        nameIllegal = false;
                     }else{
-                        alert(data)
-                        $("#form-item-account").next().children("span").text("该名称可以使用");
+                        $("#form-item-account").next().children("span").html("该名称可以使用");
+                        nameIllegal = true;
+                        username = accountName;
                     }
                 }
             }
@@ -164,5 +166,53 @@ $("#form-account").blur(function () {
 
 //注册按钮事件
 $("#form-register").click(function () {
-
+    //密码
+    var pwd = $("#form-pwd").val();
+    //重复密码
+    var eqPwd = $("#form-equalTopwd").val();
+    //信息
+    var info = "";
+    //正则
+    var reg = /^\w{6,20}/
+    //判断第一条密码是否符合条件
+    if (reg.test(pwd)) {
+        //判断两次密码是否相等
+        if (eqPwd == pwd) {
+           //判断手机号是否有效
+            if (isIllegal) {
+                //判断用户名是否有效
+                if (nameIllegal) {
+                    password = pwd;
+                    //发送注册请求
+                    //该函数优化 日后再说 2019-1-15
+                    $.post({
+                        url:"register",
+                        data:JSON.stringify({
+                            id:username,
+                            username: username,
+                            password:password,
+                            phone:phone
+                        }),
+                        dataType:"text",
+                        contentType:"application/json;charset=utf-8",
+                        success:function (data) {
+                            $("#step2-wrap").hide();
+                            $("#step-complet").show();
+                            $(".cur-step").removeClass("cur-step");
+                            $(".pro-step3").addClass("cur-step");
+                        }
+                    });
+                }else{
+                    $("#form-account").focus();
+                }
+            }else{
+                $("#form-phone").focus();
+            }
+        }else{
+            $("#pwd2").children("span").text("两次输入密码不一致");
+        }
+    }else{
+        $("#pwd1").children("span").text("请输入6-20个字符");
+    }
+    $("#commit").children("span").text(info);
 });
