@@ -16,5 +16,12 @@ public interface ItemViewDao {
      * @param pageNo 页码
      * @return
      */
-    public List<Item> findItemsByName(@Param("keyword") String keyword, @Param("pageNo") int pageNo);
+    public List<Item> findItemsByName(@Param("keyword") String keyword, @Param("pageNo") int pageNo ,@Param("pageCount") int pageCount);
+
+    /**
+     * 获取总数量
+     * @return
+     */
+    public int getItemsCount();
+
 }

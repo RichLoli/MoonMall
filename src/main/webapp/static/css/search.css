@@ -1,0 +1,101 @@
+
+
+.section{
+    border-top: 2px #F30213 solid;
+    padding-top: 20px;
+    background: #fff;
+}
+
+.gl-warp{
+    overflow: hidden;
+    padding: 10px 10px;
+}
+
+.p-img{
+    width: 100%;
+    height: 200px;
+}
+
+.gl-warp .gl-item{
+    width: 240px;
+    height: 340px;
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.gl-item .p-img{
+    margin-bottom: 10px;
+}
+
+.gl-item .p-name {
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.gl-item .p-name a{
+    color: #000;
+}
+
+.gl-item .p-name a:hover{
+    color: #e4393c;
+}
+
+.gl-i-warp{
+    padding: 12px 9px;
+}
+
+.gl-item .p-price strong {
+    margin-right: 10px;
+    color: #e4393c;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Verdana;
+}
+
+.p-price{
+    width: 100%;
+}
+
+.gl-item .p-shop {
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    margin-top: -3px;
+    margin-bottom: 9px;
+}
+
+.gl-item:hover{
+    -webkit-box-shadow: 0px 0px 5px #666;
+}
+
+.page-contro{
+    position: relative;
+    width:  520px;
+    height: 50px;
+}
+
+.pre-button{
+    float: left;
+    margin-right: 10px;
+}
+
+.next-button{
+    float: left;
+    margin-left: 10px;
+}
+
+.page-count{
+    float: left;
+    height: 30px;
+}
+
+.count-item{
+    float: left;
+    margin-right: 10px;
+}

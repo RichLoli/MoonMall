@@ -19,7 +19,7 @@ public class Item {
     /**
      * 图片地址
      */
-    private String picture_url;
+    private String pictureUrl;
     /**
      * 关键字
      */
@@ -28,29 +28,22 @@ public class Item {
      * 价格
      */
     private double price;
-
-    @Override
-    public String toString() {
-        return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", status=" + status +
-                ", picture_url='" + picture_url + '\'' +
-                ", keyword='" + keyword + '\'' +
-                ", price=" + price +
-                '}';
-    }
+    /**
+     * 店铺名称
+     */
+    private String storeName;
 
     public Item() {
     }
 
-    public Item(int id, String name, int status, String picture_url, String keyword, double price) {
+    public Item(int id, String name, int status, String pictureUrl, String keyword, double price, String storeName) {
         this.id = id;
         this.name = name;
         this.status = status;
-        this.picture_url = picture_url;
+        this.pictureUrl = pictureUrl;
         this.keyword = keyword;
         this.price = price;
+        this.storeName = storeName;
     }
 
     public int getId() {
@@ -77,12 +70,12 @@ public class Item {
         this.status = status;
     }
 
-    public String getPicture_url() {
-        return picture_url;
+    public String getPictureUrl() {
+        return pictureUrl;
     }
 
-    public void setPicture_url(String picture_url) {
-        this.picture_url = picture_url;
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 
     public String getKeyword() {
@@ -99,5 +92,13 @@ public class Item {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
     }
 }

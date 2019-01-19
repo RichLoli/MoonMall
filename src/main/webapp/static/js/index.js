@@ -124,4 +124,10 @@ $(".picbox #left-button").click(function () {
     }
 });
 
-
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 500) {
+        $(".search-head").slideDown();
+    }else{
+        $(".search-head").slideUp();
+    }
+});

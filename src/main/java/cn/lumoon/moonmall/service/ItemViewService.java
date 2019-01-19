@@ -15,5 +15,12 @@ public interface ItemViewService {
      * @param keyword
      * @return
      */
-    public List<Item> findItemsByName(String keyword,int pageNo);
+    public List<Item> findItemsByName(String keyword,int pageNo,int pageCount);
+
+
+    /**
+     * 获取总数量
+     * @return
+     */
+    public int getItemsCount();
 }

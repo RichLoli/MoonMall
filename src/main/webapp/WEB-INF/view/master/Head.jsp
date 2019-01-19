@@ -28,13 +28,15 @@
     <div id="header">
         <div class="w">
             <div id="logo">
-                <img class="img-responsive" src="/static/images/logo/Logo.png" alt="">
+                <a href="/index.jsp">
+                    <img class="img-responsive" src="/static/images/logo/Logo.png" alt="">
+                </a>
             </div>
             <div id="search">
                 <div class="search-m">
                     <div class="form">
-                        <input type="text" name="searchItem" id="searchItem" placeholder="搜索商品"/>
-                        <button id="search-button" class="button">
+                        <input type="text" name="searchItem" id="searchItem" value="${keyword}" placeholder="搜索商品"/>
+                        <button class="button search-button">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>

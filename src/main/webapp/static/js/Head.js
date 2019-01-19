@@ -39,13 +39,3 @@ $("#ttbar-login").hover(function () {
     $(".dropdown-layer").hide();
 });
 
-/**
- * 搜索按钮
- */
-$("#search-button").click(function () {
-    var keyword = $("#searchItem").val();
-    if (keyword != null) {
-        window.location.href = "/Search?keyword=" + keyword;
-    }
-
-});

@@ -3,10 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.lumoon.moonmall.dao.ItemViewDao">
-    <select id="findItemsByName" resultType="item">
+    <select id="findItemsByName" resultMap="itemView">
           SELECT item_view.id,item_view.`name`,item_view.`status`,
-          item_view.picture_url,item_view.keywords,item_view.price
-          FROM item_view where item_view.keywords like '%${keyword}%'
-          LIMIT #{pageNo}-1,#{pageNo}*16
+          item_view.picture_url,item_view.keywords,item_view.price,item_view.store_name
+          FROM item_view where item_view.keywords like '%${keyword}%' and item_view.status = 1
+          ORDER BY `name`
+          LIMIT #{pageNo},#{pageCount}
+    </select>
+    <resultMap id="itemView" type="item">
+        <id property="id" column="id"/>
+        <result property="name" column="name"></result>
+        <result property="status" column="status"></result>
+        <result property="pictureUrl" column="picture_url"></result>
+        <result property="keyword" column="keyword"></result>
+        <result property="price" column="price"></result>
+        <result property="storeName" column="store_name"></result>
+        <result property="pageCount" column="pageCount"></result>
+    </resultMap>
+    <select id="getItemsCount" resultType="int">
+        SELECT count(*)
+          FROM item_view where item_view.keywords like '%${keyword}%' and item_view.status = 1
     </select>
 </mapper>

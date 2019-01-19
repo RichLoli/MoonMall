@@ -28,8 +28,18 @@ public class ItemViewServiceImpl implements ItemViewService {
      * @return
      */
     @Override
-    public List<Item> findItemsByName(String keyword, int pageNo) {
-        return itemViewDao.findItemsByName(keyword, pageNo);
+    public List<Item> findItemsByName(String keyword, int pageNo,int pageCount) {
+        return itemViewDao.findItemsByName(keyword, pageNo,pageCount);
+    }
+
+    /**
+     * 获取总数量
+     *
+     * @return
+     */
+    @Override
+    public int getItemsCount() {
+        return itemViewDao.getItemsCount();
     }
 
 }

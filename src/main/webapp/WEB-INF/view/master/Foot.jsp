@@ -88,7 +88,7 @@
                         <span>MoonMall商城</span>
                     </div>
                     <div class="center-block">
-                        <span>本商城仅供学习测试使用，在被网站产生的一些支付将不被处理</span>
+                        <span>本商城仅供学习测试使用，在本网站产生的一切订单将不被处理</span>
                     </div>
             </div>
         </div>
