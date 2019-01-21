@@ -23,6 +23,6 @@ public interface LoginDao {
      * 登录
      * @return
      */
-    int login(User user);
+    String login(User user);
 
 }

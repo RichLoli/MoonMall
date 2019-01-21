@@ -49,7 +49,34 @@
                         <i class="iconfont icon-gouwuchekong"></i>
                         <a target="_blank" href="#">我的购物车</a>
                     </div>
-                    <div class="sc-dropdownList"></div>
+                    <div class="dropdown-layer">
+                        <div class="cart_pop">
+                            <div class="cart_hd">
+                                <h4 class="cart_hd_title">最新加入的商品</h4>
+                            </div>
+                            <div class="cart_bd J_cart_bd">
+                                <ul class="cart_singlelist">
+                                    <li class="cart_item">
+                                        <div class="cart_item_inner">
+                                            <div class="cart_img">
+                                                <a class="cart_img_lk" href="">
+                                                    <img src="//img11.360buyimg.com/n5/g17/M00/02/07/rBEbSVNx-XwIAAAAAAIiBhqyGkUAAApBgA2ilcAAiIe223.jpg"
+                                                         width="50px" height="50px" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="cart_name">
+                                                <a href="">太古小米（MI）小米AI音箱 白色 小爱同学智能音箱 听音乐语音遥控家电 人工智能音响</a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <div class="cart_price">￥22.80x1</div>
+                                                <a class="cart_delete J_delete" href="">删除</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="navitems">

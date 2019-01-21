@@ -252,7 +252,7 @@ i {
     font-style: normal;
 }
 
-.dropdown-layer{
+.dropdown-layer {
     background: #fff;
     position: absolute;
     top: 31px;
@@ -264,4 +264,114 @@ i {
 #user-name span{
     float: right;
     color: #E33333;
+}
+
+.cart_pop {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+#settleup .dropdown-layer {
+    top: 33px;
+    right: 0;
+    width: 308px;
+    height: 70px;
+    background: url(/static/images/info/loading.gif) 143px 21px #fff no-repeat;
+    background-size: 30px 30px;
+}
+
+.cart_empty {
+    height: 70px;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+    line-height: 49px;
+    overflow: hidden;
+    color: #999;
+}
+
+.cart_empty_img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 56px;
+    height: 49px;
+    background-image: url(/static/images/info/emptyCart.png);
+}
+
+.cart_hd {
+    height: 30px;
+    padding: 6px 8px;
+    line-height: 25px;
+    background-color: #fff;
+}
+
+.cart_hd_title {
+    margin: 0px;
+    -webkit-font-smoothing: antialiased;
+
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,\\5B8B\4F53,sans-serif;
+    color: #666;
+}
+
+.cart_bd {
+    background: #fff;
+    height: auto!important;
+    height: 344px;
+    max-height: 344px;
+    overflow-y: auto;
+}
+
+.cart_item {
+    line-height: 17px;
+    vertical-align: bottom;
+    *zoom: 1;
+    background: #fff;
+}
+
+.cart_item_hd, .cart_item_inner {
+    padding: 8px 10px;
+    border-top: 1px dotted #ccc;
+    overflow: hidden;
+}
+
+.cart_img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.cart_img_lk {
+    display: block;
+}
+
+.cart_name {
+    float: left;
+    width: 120px;
+    height: 52px;
+    overflow: hidden;
+}
+
+.cart_info {
+    float: right;
+    text-align: right;
+    width: 85px;
+}
+
+.cart_price {
+    font-weight: 700;
+}
+.cart_delete, .cart_price, .cart_tag {
+    float: right;
+    clear: both;
+    max-width: 85px;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

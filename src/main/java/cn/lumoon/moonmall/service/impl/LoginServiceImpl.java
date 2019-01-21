@@ -41,7 +41,7 @@ public class LoginServiceImpl implements LoginService {
      * @return
      */
     @Override
-    public boolean login(User user) {
-        return loginDao.login(user) > 0;
+    public String login(User user) {
+        return loginDao.login(user);
     }
 }

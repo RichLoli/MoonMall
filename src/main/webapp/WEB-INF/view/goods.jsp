@@ -30,7 +30,7 @@
 
     <script src="/static/js/bootstrap.min.js"></script>
 
-    <title>Title</title>
+    <title></title>
 
     <script>
         var productId = ${id};
@@ -91,7 +91,7 @@
                             <a class="btn-add" href="#none">+</a>
                         </div>
                     </div>
-                    <div class="addItem">
+                    <div class="addItem add-goods">
                         <a href="" id="InitCartUrl" class="btn btn-danger">加入购物车</a>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         </ul>
                         <div class="extra">
                             <div class="add">
-                                <a href="" style="display: block;color: #fff" class="text-center">加入购物车</a>
+                                <a href="" style="display: block;color: #fff" class="text-center add-goods">加入购物车</a>
                             </div>
                         </div>
                     </div>

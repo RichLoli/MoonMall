@@ -118,9 +118,10 @@ public class LoginController {
     @RequestMapping("/log")
     @ResponseBody
     public String login(@RequestBody User user, HttpServletRequest request){
-        boolean success = loginService.login(user);
-        if (success) {
+        String success = loginService.login(user);
+        if (success != null) {
             HttpSession session = request.getSession();
+            user.setId(success);
             session.setAttribute("user", user);
             return "200";
         }else {

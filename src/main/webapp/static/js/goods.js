@@ -1,5 +1,7 @@
 var attrList = "";
 
+var skuId;
+
 $(function () {
     //请求页面内容
     $.get({
@@ -9,6 +11,7 @@ $(function () {
         success: function (data) {
             $("#sku-name").text(data.name);
             $("#shop-name").text(data.storeName);
+            $("title").text(data.name);
             var count = 1;
             var list = JSON.parse(data.attrList);
             for (var info in list) {
@@ -74,6 +77,7 @@ function flushPrice() {
                 $("#price").text(data.price);
                 $("#weight").text(data.weight);
                 flushImg(data.id);
+                skuId = data.id;
             },
         }
     );
@@ -93,4 +97,8 @@ function getAttrlist() {
     return attrList;
 }
 
+
+$(".add-goods").click(function () {
+    window.location.href = "/cart/add?skuId="+skuId;
+});
 

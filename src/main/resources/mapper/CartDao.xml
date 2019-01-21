@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lumoon.moonmall.dao.CartDao">
+
+    <select id="getAll" parameterType="String" resultMap="CartListItem">
+        SELECT `name`,price,product_id, cart_id,`count`,pic_name
+        FROM cartlist_view WHERE user_id = #{id};
+    </select>
+
+    <resultMap id="CartListItem" type="cartListItem">
+        <result column="name" property="name"/>
+        <result column="price" property="price"/>
+        <result column="product_id" property="productId"/>
+        <result column="cart_id" property="cartId"/>
+        <result column="count" property="count"/>
+        <result column="pic_name" property="picName"/>
+    </resultMap>
+
+    <insert id="addItem">
+      	INSERT INTO cart (user_id,sku_id) VALUES(#{userId},#{skuId});
+    </insert>
+
+    <select id="findDuplicateItem" resultType="int">
+        SELECT
+            id
+                FROM
+                    cart
+                WHERE
+            cart.sku_id = #{skuId}
+            AND cart.user_id = #{userId};
+    </select>
+
+    <update id="updateCartItem" parameterType="int">
+        UPDATE cart SET count = count+1 WHERE id = #{id};
+    </update>
+
+
+</mapper>

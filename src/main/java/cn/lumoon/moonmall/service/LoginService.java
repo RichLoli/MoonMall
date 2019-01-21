@@ -22,5 +22,5 @@ public interface LoginService {
      * 登录
      * @return
      */
-    boolean login(User user);
+    String login(User user);
 }
