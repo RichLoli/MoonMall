@@ -21,7 +21,7 @@ public interface CartDao {
      * 添加一条商品到购物车
      * @return
      */
-    int addItem(@Param("skuId") int skuId, @Param("skuId") String userId);
+    int addItem(@Param("skuId") int skuId, @Param("skuId") String userId,@Param("count")int count);
 
     /**
      * 查询购物车中是否重复商品 找到则返回商品id
@@ -43,5 +43,12 @@ public interface CartDao {
      * @return
      */
     CartPage findItemBySkuId(int skuId);
+
+    /**
+     * cookie保存的sku值 查询商品
+     *
+     * @return
+     */
+    CartListItem getInfoBySku(int skuId);
 
 }

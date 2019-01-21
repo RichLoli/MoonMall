@@ -19,7 +19,7 @@
     </resultMap>
 
     <insert id="addItem">
-      	INSERT INTO cart (user_id,sku_id) VALUES(#{userId},#{skuId});
+      	INSERT INTO cart (user_id,sku_id,count) VALUES(#{userId},#{skuId},#{count});
     </insert>
 
     <select id="findDuplicateItem" resultType="int">
@@ -36,5 +36,34 @@
         UPDATE cart SET count = count+1 WHERE id = #{id};
     </update>
 
+    <select id="findItemBySkuId" parameterType="int" resultType="cartPage">
+        SELECT
+        cartpage_view.`name`,
+        cartpage_view.pic_name picName,
+        cartpage_view.id skuId,
+        cartpage_view.`data`,
+        cartpage_view.pid productId
+        FROM
+        cartpage_view
+        WHERE
+        cartpage_view.id = #{skuId};
+    </select>
+
+    <select id="getInfoBySku" parameterType="int" resultType="cartListItem">
+        SELECT
+        product.`name`,
+        product_sku.price,
+        picture.pic_name as picName,
+        product.id
+        FROM
+        product
+        INNER JOIN product_sku ON product_sku.product_id = product.id
+        INNER JOIN pic_rel ON pic_rel.sku_id = product_sku.id
+        INNER JOIN picture ON pic_rel.pic_id = picture.id
+        WHERE
+        pic_rel.`order` = 1
+        AND
+        product_sku.id = #{skuId};
+    </select>
 
 </mapper>

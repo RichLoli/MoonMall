@@ -4,6 +4,7 @@ package cn.lumoon.moonmall.model;
  * 购物车列表实体
  */
 public class CartListItem {
+
     private String name;
 
     private double price;

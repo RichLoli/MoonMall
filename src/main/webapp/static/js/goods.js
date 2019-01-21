@@ -97,8 +97,30 @@ function getAttrlist() {
     return attrList;
 }
 
+/**
+ * 数量减少
+ */
+$(".btn-reduce").click(function () {
+    var v = parseInt($("#buy-num").val());
+    if (v > 1) {
+        v--;
+        $("#buy-num").attr("value", v);
+    }
+});
+
+/**
+ * 增加数量
+ */
+$(".btn-add").click(function () {
+    var v = parseInt($("#buy-num").val());
+    if (v < 100) {
+        v++;
+        $("#buy-num").attr("value", v);
+    }
+});
+
 
 $(".add-goods").click(function () {
-    window.location.href = "/cart/add?skuId="+skuId;
+    window.location.href = "/cart/add?skuId=" + skuId + "&count=" + $("#buy-num").val();
 });
 

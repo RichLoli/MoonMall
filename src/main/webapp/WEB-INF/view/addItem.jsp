@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Arrays" %><%--
   Created by IntelliJ IDEA.
   User: Vince
   Date: 2019/1/21
@@ -39,16 +39,22 @@
                         <div class="success-top"><b class="succ-icon"></b>
                             <h3 class="ftx-02">商品已成功加入购物车！</h3></div>
                         <div class="p-item">
-                            <div class="p-img"><a href="//item.jd.com/7629588.html" target="_blank"><img
-                                    src="//img10.360buyimg.com/cms/s60x60_jfs/t1/15445/5/2946/178160/5c2325f9Ee9236ae9/6c2a5e9f2d14489a.jpg"
-                                    clstag="pageclick|keycount|201601152|11"></a></div>
+                            <div class="p-img">
+                                <a href="/goods/${item.productId}" target="_blank">
+                                    <img src="/static/images/product/${item.picName}" width="60px" height="60px">
+                                </a>
+                            </div>
                             <div class="p-info">
-                                <div class="p-name"><a href="//item.jd.com/7629588.html" target="_blank"
-                                                       clstag="pageclick|keycount|201601152|2"
-                                                       title="Apple MacBook Pro 13.3英寸笔记本电脑 深空灰色 2018新款（四核八代i5 8G 256G固态硬盘 MR9Q2CH/A）">Apple
-                                    MacBook Pro 13.3英寸笔记本电脑 深空灰色 2018新款（四核八代i5 8G 256G固态硬盘 MR9Q2CH/A）</a></div>
-                                <div class="p-extra"><span class="txt" title="四核八代 i5 8G 256G 13.3英寸灰">颜色：四核八代 i5 8G 256G 13.3英寸灰</span><span
-                                        class="txt">/  数量：1</span></div>
+                                <div class="p-name">
+                                    <a href="/goods/${item.productId}" target="_blank"
+                                       title="">
+                                        ${item.name}
+                                    </a>
+                                </div>
+                                <div class="p-extra">
+                                    <span class="txt" title="">${item.data}</span>
+                                    <span class="txt">/  数量：${count}</span>
+                                </div>
                             </div>
                             <div class="clr"></div>
                         </div>
@@ -56,11 +62,10 @@
                     <div class="success-btns success-btns-new">
                         <div class="success-ad"><a href="#none"></a></div>
                         <div class="clr"></div>
-                        <div><a class="btn-tobback" href="//item.jd.com/7629588.html" target="_blank"
-                                clstag="pageclick|keycount|201601152|3">查看商品详情</a><a class="btn-addtocart"
-                                                                                     href="//cart.jd.com/cart.action?r=0.34885132812479"
-                                                                                     id="GotoShoppingCart"
-                                                                                     clstag="pageclick|keycount|201601152|4"><b></b>去购物车结算</a>
+                        <div><a class="btn-tobback" href="/goods/${item.productId}" target="_blank"
+                                clstag="pageclick|keycount|201601152|3">查看商品详情</a>
+                            <a class="btn-addtocart" href=""
+                               id="GotoShoppingCart" clstag="pageclick|keycount|201601152|4"><b></b>去购物车结算</a>
                         </div>
                     </div>
                 </div>
@@ -70,4 +75,6 @@
 </div>
 <%@include file="master/Foot.jsp" %>
 </body>
+<script src="/static/js/Head.js"></script>
+<script src="/static/js/public.js"></script>
 </html>

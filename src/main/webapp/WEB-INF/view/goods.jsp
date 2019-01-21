@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="addItem add-goods">
-                        <a href="" id="InitCartUrl" class="btn btn-danger">加入购物车</a>
+                        <button id="InitCartUrl" class="btn btn-danger">加入购物车</button>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                         </ul>
                         <div class="extra">
                             <div class="add">
-                                <a href="" style="display: block;color: #fff" class="text-center add-goods">加入购物车</a>
+                                <span href="" style="display: block;color: #fff" class="text-center add-goods">加入购物车</span>
                             </div>
                         </div>
                     </div>

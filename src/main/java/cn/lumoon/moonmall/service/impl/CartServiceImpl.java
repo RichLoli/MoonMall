@@ -38,8 +38,8 @@ public class CartServiceImpl implements CartService {
      * @return
      */
     @Override
-    public boolean addItem(int skuId, String userId) {
-        return cartDao.addItem(skuId, userId) > 0;
+    public boolean addItem(int skuId, String userId,int count) {
+        return cartDao.addItem(skuId, userId,count) > 0;
     }
 
     /**
@@ -73,6 +73,16 @@ public class CartServiceImpl implements CartService {
     @Override
     public CartPage findItemBySkuId(int skuId) {
         return cartDao.findItemBySkuId(skuId);
+    }
+
+    /**
+     * cookie保存的sku值 查询商品
+     *
+     * @return
+     */
+    @Override
+    public CartListItem getInfoBySku(int skuId) {
+        return cartDao.getInfoBySku(skuId);
     }
 
 

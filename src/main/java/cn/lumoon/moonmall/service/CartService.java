@@ -22,7 +22,7 @@ public interface CartService {
      * 添加一条商品到购物车
      * @return
      */
-    boolean addItem(int skuId,String userId);
+    boolean addItem(int skuId,String userId,int count);
 
     /**
      * 查询购物车中是否重复商品
@@ -44,4 +44,11 @@ public interface CartService {
      * @return
      */
     CartPage findItemBySkuId(int skuId);
+
+    /**
+     * cookie保存的sku值 查询商品
+     *
+     * @return
+     */
+    CartListItem getInfoBySku(int skuId);
 }
