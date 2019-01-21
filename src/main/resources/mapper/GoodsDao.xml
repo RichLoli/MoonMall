@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lumoon.moonmall.dao.GoodsDao">
+    <select id="findGoodsById" parameterType="int" resultType="goods">
+        SELECT product.`name`,product.attr_list as attrList,store.store_name as storeName
+        FROM product INNER JOIN store ON product.store_id = store.id WHERE product.id = #{id}
+    </select>
+    <select id="getInfoById" resultType="skuInfo">
+        SELECT id,price,weight FROM product_sku
+          WHERE data = #{attrList} and product_id = #{id}
+    </select>
+    <select id="getImg" resultType="String">
+        SELECT pic_name FROM img_view WHERE sku_id = #{id} ORDER BY `order`
+    </select>
+</mapper>

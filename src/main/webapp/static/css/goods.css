@@ -197,6 +197,8 @@
 .preview .spec-items ul li {
     float: left;
     margin: 0 9px;
+    width: 54px;
+    height: 54px;
 }
 
 .main-img {
@@ -270,3 +272,8 @@
     width: 110px;
     line-height: 32px;
 }
+
+.checked{
+    border: 1px #df3033 solid;
+}
+
