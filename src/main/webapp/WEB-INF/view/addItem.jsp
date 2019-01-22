@@ -64,7 +64,7 @@
                         <div class="clr"></div>
                         <div><a class="btn-tobback" href="/goods/${item.productId}" target="_blank"
                                 clstag="pageclick|keycount|201601152|3">查看商品详情</a>
-                            <a class="btn-addtocart" href=""
+                            <a class="btn-addtocart" href="/cart/settle"
                                id="GotoShoppingCart" clstag="pageclick|keycount|201601152|4"><b></b>去购物车结算</a>
                         </div>
                     </div>

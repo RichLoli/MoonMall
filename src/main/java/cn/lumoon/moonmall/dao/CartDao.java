@@ -29,7 +29,7 @@ public interface CartDao {
      * @param userId
      * @return
      */
-    Integer findDuplicateItem(@Param("skuId") int skuId,@Param("skuId") String userId);
+    Integer findDuplicateItem(@Param("skuId") int skuId,@Param("userId") String userId);
 
     /**
      * 更新购物车表数量

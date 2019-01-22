@@ -1,45 +1,4 @@
-/**
- * 加载时向服务器确认当前用户是否登录
- */
-$(function () {
-    $.getJSON("/login/check", function (data) {
-        if (data.username != null) {
-            $("#ttbar-login").html("<a href='' class=\"link-login\">欢迎&nbsp;"
-                + data.username +
-                "</a><div class=\"dropdown-layer\">\n" +
-                "                        <div class=\"user-info\">\n" +
-                "                            <p id=\"user-name\">当前用户 <span>" + data.username + "</span></p>\n" +
-                "                            <button id=\"exit-item\" class='btn btn-danger'>退出</button>\n" +
-                "                        </div>\n" +
-                "                    </div>"
-            );
-            /**
-             * 退出登录
-             */
-            $("#exit-item").click(function () {
-                $.get(
-                    "/login/exitAccount",function (data) {
 
-                    }
-                );
-                window.location.href = "/login/tologin";
-            });
-
-        }
-    });
-});
-
-/**
- * 显示用户信息和退出按钮
- */
-$("#ttbar-login").hover(function () {
-    $("#ttbar-login .dropdown-layer").show();
-
-}, function () {
-    $("#ttbar-login .dropdown-layer").hide();
-});
-
-$
 
 $(".sc-icon").mouseenter(function () {
     $("#settleup .dropdown-layer").show();
@@ -51,6 +10,11 @@ $("#settleup .dropdown-layer").mouseleave(function () {
 });
 
 function flushCart() {
+    //商品数量
+    var count = 0;
+    //商品总价
+    var sum = 0;
+    //空购物车显示元素
     var empty = "<div class=\"cart_empty\">\n<i class=\"cart_empty_img\"></i>\n购物车还没有商品赶紧选购吧\n</div>"
     $.get({
         url: "/cart/getAll",
@@ -74,7 +38,7 @@ function flushCart() {
                         "  </a>\n" +
                         "  </div>\n" +
                         " <div class=\"cart_name\">\n" +
-                        "   <a href=\"\">"+item.name+"</a>\n" +
+                        "   <a href=\"/goods/"+item.productId+"\">"+item.name+"</a>\n" +
                         "     </div>\n" +
                         "     <div class=\"cart_info\">\n" +
                         "     <div class=\"cart_price\">￥"+item.price+"x"+item.count+"</div>\n" +
@@ -82,9 +46,18 @@ function flushCart() {
                         "     </div>\n" +
                         "    </div>\n" +
                         "     </li>\n";
+                    count++;
+                    sum += (item.price*item.count);
+
                 }
                 info+=  "  </ul>\n" +
-                    "      </div>";
+                    "      </div>" +
+                    "<div class=\"cart_ft\">\n" +
+                    " <div class=\"cart_ft_info\">\n" +
+                    "  共<span class=\"cart_num\">"+count+"</span>件商品 共计<span class=\"cart_num\">¥ "+sum+"</span>\n" +
+                    "  </div>\n" +
+                    " <a class=\"cart_ft_lk\" href=\"/cart/settle\" title=\"去购物车\">去购物车</a>\n" +
+                    " </div>";
                 $(".cart_pop").html(info);
             }else {
                 $(".cart_pop").html(empty);

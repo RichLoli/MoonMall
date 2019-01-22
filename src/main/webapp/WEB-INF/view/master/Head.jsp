@@ -47,7 +47,7 @@
                     <div class="sc-icon">
                         <i class="sc-count" id="shopping-amount">12</i>
                         <i class="iconfont icon-gouwuchekong"></i>
-                        <a target="_blank" href="#">我的购物车</a>
+                        <a target="_blank" href="/cart/settle">我的购物车</a>
                     </div>
                     <div class="dropdown-layer">
                         <div class="cart_pop">

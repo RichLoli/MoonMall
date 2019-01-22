@@ -169,6 +169,10 @@ ul{
     border-bottom-right-radius: 10px;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 #fs_col{
     float: left;
     width: 190px;

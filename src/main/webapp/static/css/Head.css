@@ -39,7 +39,7 @@ ul{
     width: 1190px;
 }
 
-.w a{
+header .w a{
     color: #999;
     text-decoration: none;
 }
@@ -376,4 +376,37 @@ i {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.cart_ft {
+    padding: 8px;
+    background: #f5f5f5;
+    text-align: right;
+    _height: 45px;
+    _padding-top: 15px;
+    _padding-bottom: 0;
+    overflow: hidden;
+}
+
+.cart_ft_info {
+    float: left;
+    line-height: 29px;
+}
+
+.cart_num {
+    font-weight: 700;
+}
+
+.cart_ft a.cart_ft_lk {
+    float: right;
+    height: 29px;
+    padding: 0 10px;
+    background: #e4393c;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 29px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }

@@ -1,0 +1,796 @@
+body{
+    background-color: #fff;
+}
+
+body .w{
+    width: 990px;
+    margin: 0px auto;
+}
+
+#logo-2014 {
+    float: left;
+    position: relative;
+    width: 277px;
+    padding: 0;
+}
+
+#logo-2014 {
+    position: relative;
+    z-index: 12;
+    float: left;
+    width: 276px;
+    height: 50px;
+    margin: 15px 0 22px;
+}
+
+.header {
+    padding: 10px 0 0;
+}
+
+#logo-2014 .logo {
+    display: block;
+    margin-top: 2px;
+    width: 134px;
+    height: 42px;
+    background: url(//misc.360buyimg.com/jdf/1.0.0/unit/global-header/5.0.0/i/jdlogo-201708-@1x.png) no-repeat 0 0;
+    background-size: 134px 42px;
+    text-indent: -20000px;
+}
+
+#logo-2014 .link2 {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    line-height: 99em;
+    top: 14px;
+    right: 38px;
+    background: #fff;
+}
+
+#logo-2014 .link2 b {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    line-height: 99em;
+    top: 0;
+    right: 0;
+    background: url(//misc.360buyimg.com/user/cart/widget/header-2017/i/cart-icon.png) #fff no-repeat;
+}
+
+.cart-search {
+    float: right;
+    border: 2px solid #c91623;
+    background: #c91623;
+    height: 29px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.cart-search .itxt {
+    border: 0;
+    height: 26px;
+    line-height: 18px;
+    width: 260px;
+    padding: 3px 5px;
+    outline: 0;
+}
+
+.cart-search .button {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+    width: 48px;
+    height: 24px;
+    background: #c91623;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    -webkit-appearance: none;
+}
+
+.header .btn-img, .header .button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart-empty {
+    height: 98px;
+    padding: 80px 0 120px;
+    color: #333;
+}
+
+.cart-empty .message {
+    height: 98px;
+    padding-left: 341px;
+    background: url(//misc.360buyimg.com/user/cart/css/i/no-login-icon.png) 250px 22px no-repeat;
+}
+
+.cart-empty .message ul {
+    padding-top: 23px;
+}
+
+.cart-empty .message .txt {
+    font-size: 14px;
+}
+
+.cart-empty .message li {
+    line-height: 26px;
+}
+
+.btn-1 {
+    font-family: arial,"Microsoft YaHei";
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 25px;
+    line-height: 25px;
+    background-color: #e74649;
+    background-image: -moz-linear-gradient(top,#e74649,#df3134);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#e74649),color-stop(1,#df3134));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74649', endColorstr='#df3134', GradientType='0');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74649', endColorstr='#df3134');
+    background-image: linear-gradient(to top,#e74649 0,#df3134 100%);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    float: none;
+    transition: all .2s ease-out;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ftx-05, .ftx05 {
+    color: #005ea7;
+}
+
+.nologin-tip {
+    border: 1px solid #edd28b;
+    background: #fffdee;
+    padding: 10px 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    color: #f70;
+}
+
+.l-tip .wicon, .nologin-tip .wicon {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(//misc.360buyimg.com/user/cart/css/i/icon16.png) 0 0 no-repeat;
+}
+
+.cart-filter-bar {
+    margin-top: 10px;
+    position: relative;
+}
+
+.cart-filter-bar .switch-cart {
+    float: left;
+    position: relative;
+    height: 26px;
+    overflow: hidden;
+}
+
+.cart-filter-bar .switch-cart li.curr, .cart-filter-bar .switch-cart li.curr a {
+    color: #E2231A;
+}
+
+.cart-filter-bar .switch-cart li {
+    float: left;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    padding: 0 0 10px;
+    cursor: pointer;
+    margin: 5px 30px 0 0;
+}
+
+.cart-filter-bar .switch-cart li {
+    float: left;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    padding: 0 0 10px;
+    cursor: pointer;
+    margin: 5px 30px 0 0;
+}
+
+.clear, .clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.cart-filter-bar .w-line {
+    position: relative;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.cart-filter-bar .w-line .floater {
+    position: absolute;
+    height: 2px;
+    background: #E2231A;
+    left: 0;
+    width: 80px;
+    overflow: hidden;
+}
+
+.cart-warp {
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.cart-main .cart-thead {
+    display: inline-block;
+    display: block;
+    height: 42px;
+    line-height: 32px;
+    margin: 0 0 10px;
+    padding: 5px 0;
+    background: #f3f3f3;
+    border: 1px solid #e9e9e9;
+    border-top: 0;
+    position: relative;
+}
+
+.cart-main .cart-thead .t-checkbox {
+    height: 18px;
+    line-height: 18px;
+    padding-top: 7px;
+    width: 122px;
+    padding-left: 11px;
+}
+
+.cart-main .cart-thead .column {
+    float: left;
+}
+
+.cart-checkbox {
+    position: relative;
+    z-index: 3;
+    float: left;
+    margin-right: 5px;
+}
+
+.cart-main .jdcheckbox, .cart-main .jdradio {
+    float: none;
+    position: relative;
+    z-index: 5;
+    vertical-align: middle;
+    _vertical-align: -1px;
+    margin: 0 3px 0 0;
+    padding: 0;
+    *left: -3px;
+}
+
+.cart-checkbox .jdcheckbox {
+    position: relative;
+    float: none;
+    vertical-align: middle;
+    _vertical-align: -1px;
+    margin: 0 3px 0 0;
+    *left: -3px;
+    padding: 0;
+}
+
+.cart-checkbox label {
+    display: none;
+}
+
+.cart-main-new .cart-thead .t-goods {
+    width: 208px;
+}
+
+.cart-main-new .cart-thead .t-goods {
+    width: 384px;
+}
+
+.cart-main-new .cart-thead .t-props {
+    width: 140px;
+}
+
+.cart-main .cart-thead .t-price {
+    width: 132px;
+    padding-right: 37px;
+    text-align: right;
+}
+
+.cart-main .cart-thead .t-quantity {
+    width: 111px;
+    text-align: center;
+}
+
+.cart-main .cart-thead .t-sum {
+    width: 132px;
+    padding-right: 58px;
+    text-align: right;
+}
+
+.cart-main .cart-thead .t-action {
+    width: 100px;
+}
+
+.cart-tbody .item-item .cell {
+    float: left;
+    padding: 15px 0 10px;
+}
+.cart-item-list {
+    margin-bottom: 20px;
+}
+
+.cart-tbody {
+    font-family: "Microsoft YaHei",SimSun,verdana;
+}
+
+.item-list {
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    _border-width: 1px;
+    border-color: #aaa #f1f1f1 #f1f1f1;
+    background: #fff;
+}
+
+.cart-item-list .cart-tbody .item-selected {
+    background: #fff4e8;
+}
+
+.item-list .item-full:first-child, .item-list .item-single:first-child, .item-list .item-suit4full:first-child, .item-list .item-suit:first-child {
+    border-top: 0;
+}
+
+.cart-tbody .item-item {
+    position: relative;
+    padding: 0 0 1px 40px;
+    border-top: 1px solid #c5c5c5;
+    line-height: 20px;
+    _height: 116px;
+    background: #fff;
+    *zoom: 1;
+}
+
+.cart-tbody .item-item .item-form {
+    display: inline-block;
+    display: block;
+    overflow: hidden;
+}
+
+.cart-tbody .item-item .p-checkbox {
+    position: absolute;
+    z-index: 3;
+    left: 10px;
+    top: 0;
+    width: 30px;
+    min-height: 10px;
+    _height: 10px;
+}
+
+.cart-main-new .cart-tbody .item-item .p-goods {
+    width: 300px;
+}
+
+.cart-main-new .cart-tbody .item-item .p-props, .cart-main-new .cart-tbody .item-item .p-props-new {
+    width: 151px;
+    padding-right: 0;
+}
+
+.cart-tbody .item-item .p-props-new {
+    width: 100px;
+    *height: 80px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 15px 0 0 20px;
+}
+
+.cart-tbody .item-item .p-props {
+    width: 80px;
+    min-height: 10px;
+    _height: 10px;
+    padding: 15px 20px;
+}
+
+.cart-tbody .item-item .cell {
+    float: left;
+    padding: 15px 0 10px;
+}
+
+.cart-tbody .item-item .p-price-new {
+    width: 150px;
+}
+
+.cart-tbody .item-item .p-price {
+    width: 164px;
+    padding-right: 40px;
+    font-family: verdana;
+    text-align: right;
+}
+
+.cart-tbody .item-item .p-quantity {
+    width: 116px;
+}
+
+.cart-tbody .item-item .p-sum {
+    width: 117px;
+    padding-right: 40px;
+    text-align: right;
+    font-family: verdana;
+}
+
+.cart-tbody .item-item .p-ops {
+    width: 49px;
+}
+
+.cart-checkbox {
+    position: relative;
+    z-index: 3;
+    float: left;
+    margin-right: 5px;
+}
+
+.cart-main .jdcheckbox, .cart-main .jdradio {
+    float: none;
+    position: relative;
+    z-index: 5;
+    vertical-align: middle;
+    _vertical-align: -1px;
+    margin: 0 3px 0 0;
+    padding: 0;
+    *left: -3px;
+}
+
+.cart-checkbox .jdcheckbox {
+    position: relative;
+    float: none;
+    vertical-align: middle;
+    _vertical-align: -1px;
+    margin: 0 3px 0 0;
+    *left: -3px;
+    padding: 0;
+}
+
+.cart-tbody .item-item .goods-item {
+    display: inline-block;
+    display: block;
+}
+
+.cart-tbody .item-item .goods-item .p-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cart-tbody .item-item .goods-item .p-name {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.cart-tbody .item-item .goods-item .p-name a {
+    color: #333;
+}
+
+.cart-main-new .cart-tbody .item-item .p-props-new .props-txt {
+    width: 140px;
+}
+
+.cart-tbody .item-item .p-props-new .props-txt {
+    width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: default;
+}
+
+.cart-tbody .item-item .p-price-new .plus-switch {
+    cursor: pointer;
+}
+
+.cart-tbody .item-item .p-price strong {
+    display: block;
+    color: #333;
+    font-weight: 400;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.cart-tbody .item-item .p-quantity .quantity-form {
+    position: relative;
+    overflow: hidden;
+    height: 22px;
+    width: 80px;
+}
+
+.cart-tbody .item-item .p-quantity .decrement.disabled, .cart-tbody .item-item .p-quantity .increment.disabled {
+    cursor: default;
+    color: #e9e9e9;
+}
+
+.cart-tbody .item-item .p-quantity .decrement {
+    float: left;
+}
+
+.cart-tbody .item-item .p-quantity .decrement, .cart-tbody .item-item .p-quantity .increment {
+    border: 1px solid #cacbcb;
+    border-right: 0;
+    height: 21px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 21px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+    background: #fff;
+}
+
+.cart-tbody .item-item .p-quantity .increment {
+    float: right;
+    border: 1px solid #cacbcb;
+    border-left: 0;
+    color: #666;
+}
+
+.cart-tbody .item-item .p-quantity .itxt {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    border: 1px solid #cacbcb;
+    width: 39px;
+    height: 21px;
+    line-height: 18px;
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    font-size: 12px;
+    font-family: verdana;
+    color: #333;
+    -webkit-appearance: none;
+}
+
+.cart-tbody .item-item .p-sum strong {
+    color: #333;
+    font-weight: 700;
+    display: block;
+}
+
+.cart-tbody .item-item .p-ops a {
+    color: #666;
+    display: block;
+}
+
+#cart-floatbar {
+    position: relative;
+}
+
+.cart-toolbar {
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    background: #fff;
+    position: relative;
+}
+
+.toolbar-wrap {
+    position: relative;
+    width: 988px;
+    margin: 0 auto;
+}
+
+.toolbar-wrap .selected-item-list {
+    position: absolute;
+    z-index: 10;
+    top: -122px;
+    left: 0;
+    height: 122px;
+}
+
+.toolbar-wrap .options-box {
+    position: relative;
+    height: 50px;
+}
+
+.toolbar-wrap .select-all {
+    float: left;
+    height: 18px;
+    *width: 60px;
+    line-height: 18px;
+    padding: 16px 0 16px 9px;
+    white-space: nowrap;
+}
+
+.cart-checkbox {
+    position: relative;
+    z-index: 3;
+    float: left;
+    margin-right: 5px;
+}
+
+.cart-checkbox .jdcheckbox {
+    position: relative;
+    float: none;
+    vertical-align: middle;
+    _vertical-align: -1px;
+    margin: 0 3px 0 0;
+    *left: -3px;
+    padding: 0;
+}
+
+.toolbar-wrap .operation {
+    float: left;
+    height: 50px;
+    width: 310px;
+    line-height: 50px;
+}
+
+.toolbar-wrap .operation a {
+    float: left;
+    margin-left: 10px;
+    color: #666;
+}
+
+.toolbar-wrap .operation .cleaner-opt {
+    font-weight: 700;
+    position: relative;
+}
+
+.toolbar-wrap .toolbar-right {
+    position: absolute;
+    height: 52px;
+    right: 0;
+    top: -1px;
+    width: 610px;
+}
+
+.toolbar-wrap .toolbar-right .normal {
+    height: 52px;
+}
+
+.toolbar-wrap .toolbar-right .normal .comm-right {
+    float: right;
+    width: 650px;
+    *width: 610px;
+}
+
+.toolbar-wrap .btn-area {
+    float: right;
+}
+
+.toolbar-wrap .price-sum {
+    float: right;
+    height: 43px;
+    line-height: 20px;
+    margin: 7px 20px 0 10px;
+    color: #666;
+    width: auto;
+    position: relative;
+}
+
+.toolbar-wrap .amount-sum {
+    float: right;
+    color: #999;
+    height: 44px;
+    line-height: 20px;
+    margin: 7px 0 0;
+    cursor: pointer;
+}
+
+.toolbar-wrap .price-sum div {
+    white-space: nowrap;
+}
+
+.toolbar-wrap .price-sum .txt-new {
+    width: 50px;
+}
+
+.toolbar-wrap .price-sum .txt {
+    float: left;
+    width: 50px;
+    text-align: right;
+    color: #999;
+}
+
+.toolbar-wrap .price-sum .price {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-align: right;
+    font-family: verdana;
+}
+
+.toolbar-wrap .price-sum .price em {
+    font-size: 16px;
+    color: #E2231A;
+    font-weight: 700;
+}
+
+.toolbar-wrap .price-sum .price-tips {
+    vertical-align: text-bottom;
+    display: inline-block;
+    height: 18px;
+    width: 12px;
+    background: url(//misc.360buyimg.com/user/cart/css/i/price-tips.png) 0 0 no-repeat;
+}
+
+.price-tipsbox {
+    display: none;
+    position: absolute;
+    top: -42px;
+    left: 160px;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    box-shadow: 0 0 2px #eee;
+    background: #fff!important;
+    border-color: #ddd!important;
+}
+
+.ui-tips-main {
+    color: #666;
+}
+
+.price-tipsbox .price-tipsbox-arrow {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 18px;
+    height: 10px;
+    background-image: url(//misc.360buyimg.com/user/cart/css/i/cart-tips-arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: 0 0!important;
+    overflow: hidden;
+}
+
+.toolbar-wrap .amount-sum em {
+    color: #E2231A;
+    font-family: verdana;
+    font-weight: 700;
+    margin: 0 3px;
+}
+
+.toolbar-wrap .btn-area .common-submit-btn, .toolbar-wrap .btn-area .jdInt-submit-btn, .toolbar-wrap .btn-area .jdInt-submit-btn-hd, .toolbar-wrap .btn-area .submit-btn {
+    display: block;
+    position: relative;
+    width: 94px;
+    height: 49px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+    background: #e54346;
+    overflow: hidden;
+}
