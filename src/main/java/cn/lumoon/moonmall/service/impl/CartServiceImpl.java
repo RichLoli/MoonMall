@@ -85,5 +85,16 @@ public class CartServiceImpl implements CartService {
         return cartDao.getInfoBySku(skuId);
     }
 
+    /**
+     * 删除购物车商品
+     *
+     * @param cartId
+     * @return
+     */
+    @Override
+    public int delCartItem(int cartId) {
+        return cartDao.delCartItem(cartId);
+    }
+
 
 }

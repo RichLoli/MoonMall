@@ -51,4 +51,11 @@ public interface CartService {
      * @return
      */
     CartListItem getInfoBySku(int skuId);
+
+    /**
+     * 删除购物车商品
+     * @param cartId
+     * @return
+     */
+    int delCartItem(int cartId);
 }

@@ -259,6 +259,7 @@ i {
     right: -97px;
     width: 166px;
     z-index: 12;
+    display: none;
 }
 
 #user-name span{
@@ -289,6 +290,7 @@ i {
     line-height: 49px;
     overflow: hidden;
     color: #999;
+    background-color: #fff
 }
 
 .cart_empty_img {

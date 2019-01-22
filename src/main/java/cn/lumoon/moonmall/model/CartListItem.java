@@ -19,6 +19,16 @@ public class CartListItem {
 
     private String userId;
 
+    private int skuId;
+
+    public int getSkuId() {
+        return skuId;
+    }
+
+    public void setSkuId(int skuId) {
+        this.skuId = skuId;
+    }
+
     public String getUserId() {
         return userId;
     }

@@ -54,6 +54,9 @@ public class CartController {
                         cartListItem.setCount(cartListItem.getCount() + 1);
                     }else{
                         CartListItem cartListItem = cartService.getInfoBySku(Integer.parseInt(cookie.getValue()));
+                        cartListItem.setCartId(-1);
+                        cartListItem.setSkuId(Integer.parseInt(cookie.getValue()));
+                        cartListItem.setCount(1);
                         map.put(skuId, cartListItem);
                     }
                 }
@@ -95,7 +98,7 @@ public class CartController {
             //个人觉得效率低下，不能直接赋值数量
             for (int i = 0; i < c; i++) {
                 Cookie cookie = new Cookie("cartItem"+UUID.randomUUID(), skuId + "");
-                cookie.setMaxAge(-1);
+                cookie.setMaxAge(300);
                 response.addCookie(cookie);
             }
         }
@@ -112,7 +115,28 @@ public class CartController {
      */
     @RequestMapping("delItem")
     @ResponseBody
-    public void delItem() {
-
+    public String delItem(String cartId,String skuId,HttpServletRequest request,HttpServletResponse response) {
+        int cId = Integer.parseInt(cartId);
+        //判断是否登录
+        /*
+            由于未登录时加入的商品没有cartId 所以默认同意设置为-1
+            根据传来的cId判断是否为-1就能知道是否登录
+            传cId的方式是为了方便登录后的删除工作
+         */
+        if (cId == -1) {
+            Cookie[] cookies = request.getCookies();
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().startsWith("cartItem")) {
+                    if (cookie.getValue().equals(skuId)) {
+                        Cookie cookie1 = new Cookie(cookie.getName(),null);
+                        cookie1.setMaxAge(0);
+                        response.addCookie(cookie1);
+                    }
+                }
+            }
+        }else{
+            cartService.delCartItem(Integer.parseInt(cartId));
+        }
+        return "";
     }
 }

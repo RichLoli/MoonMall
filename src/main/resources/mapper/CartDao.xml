@@ -5,7 +5,7 @@
 <mapper namespace="cn.lumoon.moonmall.dao.CartDao">
 
     <select id="getAll" parameterType="String" resultMap="CartListItem">
-        SELECT `name`,price,product_id, cart_id,`count`,pic_name
+        SELECT `name`,price,product_id, cart_id,`count`,pic_name,id
         FROM cartlist_view WHERE user_id = #{id};
     </select>
 
@@ -16,6 +16,7 @@
         <result column="cart_id" property="cartId"/>
         <result column="count" property="count"/>
         <result column="pic_name" property="picName"/>
+        <result column="id" property="skuId"/>
     </resultMap>
 
     <insert id="addItem">
@@ -65,5 +66,8 @@
         AND
         product_sku.id = #{skuId};
     </select>
+    <delete id="delCartItem" parameterType="int">
+        delete from cart where id = #{cartId};
 
+    </delete>
 </mapper>
