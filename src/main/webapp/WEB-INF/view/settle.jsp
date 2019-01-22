@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -33,6 +34,10 @@
     <title>订单结算页</title>
 </head>
 <body>
+<%
+    double summary = 0;
+    pageContext.setAttribute("summary", summary);
+%>
 <div id="shortcut">
     <div class="w">
         <ul class="fr">
@@ -95,146 +100,7 @@
             <div class="step-cont">
                 <div class="addr" style="max-height: 40px;overflow: hidden;">
                     <ul class="addr-list">
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                               	<a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
-                        <li class="addr-item" style="display: list-item;" selected="selected" >
-                            <div class="consignee-item item-selected" longitude="1000.0" gclng="116.2512" latitude="1000.0" gclat="40.121" consigneeid="571833473" provinceid="1" cityid="2901" countyid="2906" id="consignee_index_div_571833473" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div">
-                                <span limit="8" title="徐璐">徐璐</span><b></b>
-                            </div>
-                            <div class="addr-detail">
-                                <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
-                                <span class="addr-name" limit="6" title="徐璐">徐璐</span>
-                                <span class="addr-info" limit="45" title="北京 昌平区 城区以外  沙阳路18号北京科技职业学院">北京 昌平区 城区以外  沙阳路18号北京科技职业学院</span>
-                                <span class="addr-tel">185****5675</span>
-                            </div>
-                            <div class="op-btns" consigneeid="571833473" isoldaddress="false">
-                                <a href="#none" class="ftx-05 edit-consignee">编辑</a>
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
                 <div class="more-addr">
@@ -268,117 +134,31 @@
                     <div class="step-cont">
                         <div class="goods-list">
                             <div class="goods-items">
-                                <div class="goods-item">
-                                    <div class="p-img">
-                                        <a href="" target="_blank">
-                                            <img src="//img14.360buyimg.com/N4/jfs/t1/9471/22/10451/167543/5c231ebeE8f2d556b/c0d2146773faac20.jpg"
-                                                  alt="">
-                                        </a>
-                                    </div>
-                                    <div class="goods-msg">
-                                        <div class="goods-msg-gel">
-                                            <div class="p-name">
-                                                <a href="http://item.jd.com/4335139.html?dist=" target="_blank">
-                                                    Apple MacBook Air 13.3英寸笔记本电脑 银色(2017款Core i5 处理器/8GB内存/256GB闪存 MQD42CH/A)
-                                                </a>
-                                            </div>
-                                            <div class="p-price ">
-                                                <strong class="jd-price">￥ 8415.00
-                                                </strong>
-                                                <span class="p-num">x1</span>
+                                <c:forEach items="${cartItems}" var="item" varStatus="status">
+                                    <c:set var="summary" value="${summary+item.price}"/>
+                                    <div class="goods-item" data-skuId="${item.skuId}">
+                                        <div class="p-img">
+                                            <a href="" target="_blank">
+                                                <img src="/static/images/product/${item.picName}"
+                                                     alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goods-msg">
+                                            <div class="goods-msg-gel">
+                                                <div class="p-name">
+                                                    <a href="#none" target="_blank">
+                                                        ${item.name}
+                                                    </a>
+                                                </div>
+                                                <div class="p-price ">
+                                                    <strong class="jd-price">￥ ${item.price}
+                                                    </strong>
+                                                    <span class="p-num">x${item.count}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="goods-item">
-                                    <div class="p-img">
-                                        <a href="" target="_blank">
-                                            <img src="//img14.360buyimg.com/N4/jfs/t1/9471/22/10451/167543/5c231ebeE8f2d556b/c0d2146773faac20.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                    <div class="goods-msg">
-                                        <div class="goods-msg-gel">
-                                            <div class="p-name">
-                                                <a href="http://item.jd.com/4335139.html?dist=" target="_blank">
-                                                    Apple MacBook Air 13.3英寸笔记本电脑 银色(2017款Core i5 处理器/8GB内存/256GB闪存 MQD42CH/A)
-                                                </a>
-                                            </div>
-                                            <div class="p-price ">
-                                                <strong class="jd-price">￥ 8415.00
-                                                </strong>
-                                                <span class="p-num">x1</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="goods-item">
-                                    <div class="p-img">
-                                        <a href="" target="_blank">
-                                            <img src="//img14.360buyimg.com/N4/jfs/t1/9471/22/10451/167543/5c231ebeE8f2d556b/c0d2146773faac20.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                    <div class="goods-msg">
-                                        <div class="goods-msg-gel">
-                                            <div class="p-name">
-                                                <a href="http://item.jd.com/4335139.html?dist=" target="_blank">
-                                                    Apple MacBook Air 13.3英寸笔记本电脑 银色(2017款Core i5 处理器/8GB内存/256GB闪存 MQD42CH/A)
-                                                </a>
-                                            </div>
-                                            <div class="p-price ">
-                                                <strong class="jd-price">￥ 8415.00
-                                                </strong>
-                                                <span class="p-num">x1</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="goods-item">
-                                    <div class="p-img">
-                                        <a href="" target="_blank">
-                                            <img src="//img14.360buyimg.com/N4/jfs/t1/9471/22/10451/167543/5c231ebeE8f2d556b/c0d2146773faac20.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                    <div class="goods-msg">
-                                        <div class="goods-msg-gel">
-                                            <div class="p-name">
-                                                <a href="http://item.jd.com/4335139.html?dist=" target="_blank">
-                                                    Apple MacBook Air 13.3英寸笔记本电脑 银色(2017款Core i5 处理器/8GB内存/256GB闪存 MQD42CH/A)
-                                                </a>
-                                            </div>
-                                            <div class="p-price ">
-                                                <strong class="jd-price">￥ 8415.00
-                                                </strong>
-                                                <span class="p-num">x1</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="goods-item">
-                                    <div class="p-img">
-                                        <a href="" target="_blank">
-                                            <img src="//img14.360buyimg.com/N4/jfs/t1/9471/22/10451/167543/5c231ebeE8f2d556b/c0d2146773faac20.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                    <div class="goods-msg">
-                                        <div class="goods-msg-gel">
-                                            <div class="p-name">
-                                                <a href="http://item.jd.com/4335139.html?dist=" target="_blank">
-                                                    Apple MacBook Air 13.3英寸笔记本电脑 银色(2017款Core i5 处理器/8GB内存/256GB闪存 MQD42CH/A)
-                                                </a>
-                                            </div>
-                                            <div class="p-price ">
-                                                <strong class="jd-price">￥ 8415.00
-                                                </strong>
-                                                <span class="p-num">x1</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                </c:forEach>
                             </div>
                         </div>
                     </div>
@@ -389,10 +169,10 @@
             <div class="statistic fr">
                 <div class="list">
                     <span>
-                        <em class="ftx-01">5</em>
+                        <em class="ftx-01">${cartItems.size()}</em>
                         件商品，总商品金额
                     </span>
-                    ￥<em class="price">37419</em>
+                    ￥<em class="price">${summary}</em>
                 </div>
             </div>
         </div>
@@ -400,7 +180,7 @@
             <div class="trade-foot-detail-com">
                 <div class="fc-price-info">
                     <span class="price-tit">应付总额：</span>
-                    <span class="price-num" id="sumPayPriceId">￥37419.00</span>
+                    <span class="price-num" id="sumPayPriceId">￥${summary}</span>
                 </div>
             </div>
         </div>
@@ -411,4 +191,5 @@
 </div>
 <%@include file="master/Foot.jsp" %>
 </body>
+<script src="/static/js/settle.js"></script>
 </html>

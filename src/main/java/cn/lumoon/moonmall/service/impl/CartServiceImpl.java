@@ -1,9 +1,11 @@
 package cn.lumoon.moonmall.service.impl;
 
 import cn.lumoon.moonmall.dao.CartDao;
+import cn.lumoon.moonmall.model.Address;
 import cn.lumoon.moonmall.model.CartListItem;
 import cn.lumoon.moonmall.vo.CartPage;
 import cn.lumoon.moonmall.service.CartService;
+import cn.lumoon.moonmall.vo.CartSettleView;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -94,6 +96,28 @@ public class CartServiceImpl implements CartService {
     @Override
     public int delCartItem(int cartId) {
         return cartDao.delCartItem(cartId);
+    }
+
+    /**
+     * 获取地址
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    public List<Address> getAddressList(String userId) {
+        return cartDao.getAddressList(userId);
+    }
+
+    /**
+     * 根据购物车表id获取商品信息
+     *
+     * @param list
+     * @return
+     */
+    @Override
+    public List<CartSettleView> findItemsByCartId(List<Integer> list) {
+        return cartDao.findItemsByCartId(list);
     }
 
 

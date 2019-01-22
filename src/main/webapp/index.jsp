@@ -159,7 +159,7 @@
             <div class="sk_hd">
                 <a class="sk_hd_lk" href="//miaosha.jd.com" target="_blank"
                    clstag="h|keycount|core|seckill_a">
-                    <div class="sk_tit">京东秒杀</div>
+                    <div class="sk_tit">MM秒杀</div>
                     <div class="sk_subtit">FLASH DEALS</div>
                     <i class="sk_ico"></i>
                     <div class="sk_desc">本场距离结束还剩</div>

@@ -225,11 +225,13 @@ $(function () {
                     //判断是否选中
                     if ($(this).prop("checked") == true) {
                         $('input[name=toggle-checkboxes]').attr("checked", "checked");
-                        $("input[name=checkItem]").attr("checked", "checked").addClass("item-selected");
+                        $("input[name=checkItem]").prop("checked", true);
+                        $(".item-single").addClass("item-selected");
                         flushPrice()
                     }else{
                         $('input[name=toggle-checkboxes]').removeAttr("checked");
-                        $("input[name=checkItem]").removeAttr("checked").removeClass("item-selected");
+                        $("input[name=checkItem]").prop("checked", false);
+                        $(".item-single").removeClass("item-selected");
                         flushPrice()
                     }
                 }
@@ -278,16 +280,21 @@ $(function () {
                     window.location.reload();
                 });
             });
+
             $("#settle-submit").click(function () {
-                // if ($("#isLogin").val() == '0') {
-                //     window.location.href = "/login/tologin";
-                // }else{
-                var link = "/cart/tosettle?";
-                    $('input[name=checkItem]').each(function (index) {
-                        link+="cartIds="+$(this).parents(".item-single").attr("data-cartId")+"&";
-                    });
-                window.location.href = link.substring(0, link.length - 1);
-                // }
+                if ($("input[checked=checked]").length != 0) {
+                    if ($("#isLogin").val() == '0') {
+                        window.location.href = "/login/tologin";
+                    }else{
+                        var link = "/cart/tosettle?";
+                        $('input[name=checkItem]').each(function (index) {
+                            link+="cartIds="+$(this).parents(".item-single").attr("data-cartId")+"&";
+                        });
+                        window.location.href = link.substring(0, link.length - 1);
+                    }
+                }else{
+                    alert("请至少选择一个商品")
+                }
             });
         }
     });
@@ -303,7 +310,7 @@ function flushPrice() {
             count++;
             sum += parseInt($(this).parents(".item-single").attr("data-sum"));
         }
-    })
+    });
     $(".amount-sum em").text(count);
     $(".sumPrice em").text(sum)
 }

@@ -1,7 +1,9 @@
 package cn.lumoon.moonmall.service;
 
+import cn.lumoon.moonmall.model.Address;
 import cn.lumoon.moonmall.model.CartListItem;
 import cn.lumoon.moonmall.vo.CartPage;
+import cn.lumoon.moonmall.vo.CartSettleView;
 
 import java.util.List;
 
@@ -58,4 +60,18 @@ public interface CartService {
      * @return
      */
     int delCartItem(int cartId);
+
+    /**
+     * 获取地址
+     * @param userId
+     * @return
+     */
+    public List<Address> getAddressList(String userId);
+
+    /**
+     * 根据购物车表id获取商品信息
+     * @param list
+     * @return
+     */
+    List<CartSettleView> findItemsByCartId(List<Integer> list);
 }

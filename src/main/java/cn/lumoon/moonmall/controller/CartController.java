@@ -1,11 +1,13 @@
 package cn.lumoon.moonmall.controller;
 
+import cn.lumoon.moonmall.model.Address;
 import cn.lumoon.moonmall.model.CartListItem;
 import cn.lumoon.moonmall.model.User;
 import cn.lumoon.moonmall.service.CartService;
 import cn.lumoon.moonmall.vo.CartPage;
 import com.fasterxml.jackson.core.JsonParser;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -162,7 +164,21 @@ public class CartController {
     }
 
     @RequestMapping("/tosettle")
-    public String toSettle(String [] ids){
-        return "settle";
+    public ModelAndView toSettle(String [] cartIds){
+        ModelAndView view = new ModelAndView("settle");
+        List<Integer> list = new ArrayList();
+        for (String id : cartIds) {
+            list.add(Integer.parseInt(id));
+        }
+        view.addObject("cartItems", cartService.findItemsByCartId(list));
+        return view;
     }
+
+    @RequestMapping("/address")
+    @ResponseBody
+    public List<Address> getAddress(HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        return cartService.getAddressList(user.getId());
+    }
+
 }

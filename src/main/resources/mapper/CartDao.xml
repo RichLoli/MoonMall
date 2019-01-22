@@ -69,6 +69,33 @@
     </select>
     <delete id="delCartItem" parameterType="int">
         delete from cart where id = #{cartId};
-
     </delete>
+    <select id="getAddressList" parameterType="String" resultType="address">
+        SELECT
+        address.id,
+        address.consignee,
+        address.region,
+        address.detail,
+        address.phone
+        FROM
+        address
+        WHERE
+        address.user_id = #{value};
+
+    </select>
+    <select id="findItemsByCartId" parameterType="java.util.List" resultType="cartSettleView">
+        SELECT
+        cartlist_view.`name`,
+        cartlist_view.price,
+        cartlist_view.count,
+        cartlist_view.pic_name as picName,
+        cartlist_view.id as skuId
+        FROM
+        cartlist_view
+        WHERE
+        cartlist_view.cart_id in
+        <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
 </mapper>
