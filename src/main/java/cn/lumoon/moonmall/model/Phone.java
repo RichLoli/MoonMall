@@ -3,9 +3,11 @@ package cn.lumoon.moonmall.model;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
+
 @Component
 @Scope("prototype")
-public class Phone {
+public class Phone implements Serializable {
     private String phone;
     private String verifyCode;
     private long sendTime;

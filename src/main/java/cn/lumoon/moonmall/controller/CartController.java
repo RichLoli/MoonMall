@@ -160,4 +160,9 @@ public class CartController {
         }
         return "";
     }
+
+    @RequestMapping("/tosettle")
+    public String toSettle(String [] ids){
+        return "settle";
+    }
 }

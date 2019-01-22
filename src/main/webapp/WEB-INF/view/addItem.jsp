@@ -8,8 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="/static/images/logo/cbnhj-dz1u8-002.ico" type="image/x-icon"/>
 
@@ -62,7 +63,7 @@
                     <div class="success-btns success-btns-new">
                         <div class="success-ad"><a href="#none"></a></div>
                         <div class="clr"></div>
-                        <div><a class="btn-tobback" href="/goods/${item.productId}" target="_blank"
+                        <div><a class="btn-tobback" href="/goods/${item.productId}" target="_self"
                                 clstag="pageclick|keycount|201601152|3">查看商品详情</a>
                             <a class="btn-addtocart" href="/cart/settle"
                                id="GotoShoppingCart" clstag="pageclick|keycount|201601152|4"><b></b>去购物车结算</a>

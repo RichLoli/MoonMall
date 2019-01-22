@@ -1,9 +1,11 @@
 package cn.lumoon.moonmall.model;
 
+import java.io.Serializable;
+
 /**
  * 对应视图的实体类，用来表示搜索内容下的商品
  */
-public class Item {
+public class Item implements Serializable {
     /**
      * id
      */

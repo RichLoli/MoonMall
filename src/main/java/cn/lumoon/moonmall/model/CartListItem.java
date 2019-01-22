@@ -1,9 +1,11 @@
 package cn.lumoon.moonmall.model;
 
+import java.io.Serializable;
+
 /**
  * 购物车列表实体
  */
-public class CartListItem {
+public class CartListItem implements Serializable {
 
     private String name;
 
@@ -20,6 +22,16 @@ public class CartListItem {
     private String userId;
 
     private int skuId;
+
+    private String data;
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
 
     public int getSkuId() {
         return skuId;

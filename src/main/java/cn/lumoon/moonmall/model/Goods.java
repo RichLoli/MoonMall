@@ -1,9 +1,11 @@
 package cn.lumoon.moonmall.model;
 
+import java.io.Serializable;
+
 /**
  * 商品页面展示的实体类
  */
-public class Goods {
+public class Goods implements Serializable {
      private String name;
      private String attrList;
     private String storeName;

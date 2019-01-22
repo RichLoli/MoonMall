@@ -3,6 +3,24 @@
     background: #fff;
 }
 
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
 .preview-wrap{
     float: left;
     margin-top: 10px;

@@ -1,11 +1,13 @@
 package cn.lumoon.moonmall.model;
 
+import java.io.Serializable;
+
 /**
  * pojo类 与数据库user表映射
  * @author loligafeo
  * @version 1.0.0 2019/1/14
  */
-public class User {
+public class User implements Serializable {
     /**
      * 用户id
      */
