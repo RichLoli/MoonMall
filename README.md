@@ -1,11 +1,35 @@
-<h1>MoonMall电商项目</h1>  
-前端: <i>jquery</i>+<i>bootstrap</i><br>
-后端：SSM + Maven <br>
-数据库连接池: Druid<br>
-服务器架构:Nginx负载均衡+Tomcat集群<br>
-数据库:mysql5.7<br>
+# MoonMall 电商
 
+> 基于SSM下的电商小项目，前端仿照京东模板修改
 
-这个项目是个练手项目
-以后会改进
-暂时实现下订单功能
+> 该项目包含了 登录注册（手机验证码）、首页门户、搜索商品、商品详情、购物车、第三方支付
+
+## 项目介绍
+
+**MoonMall**(沐月商城) 是一个电商系统 基于Spring+SpringMVC+MyBatis开发 
+
+商城系统包含了登录注册（手机验证码）、首页门户、搜索商品、商品详情、购物车、第三方支付
+
+页面使用jsp渲染，是初入java web的一个入手项目
+
+## 技术选型
+后端技术：
+
+技术|说明
+--- | ---
+Spring|IOC容器
+SpringMVC|MVC框架
+Mybatis|ORM框架
+Druid|数据库连接池
+
+前端技术：
+
+技术|说明
+--- | ---
+BootStarp|CSS样式框架
+Jquery|JS封装框架
+FontAwesome|字体图标
+
+服务架构
+
+本项目采用Nginx（负载均衡）+Tomcat的集群架构
