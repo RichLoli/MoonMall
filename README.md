@@ -32,4 +32,6 @@ FontAwesome|字体图标
 
 服务架构
 
+![架构](https://github.com/RichLoli/MoonMall/blob/master/Moon%E6%9E%B6%E6%9E%84.PNG?raw=true)
+
 本项目采用Nginx（负载均衡）+Tomcat的集群架构
